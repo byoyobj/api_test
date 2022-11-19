@@ -2,6 +2,8 @@ const decompress = require("decompress");
 var fs = require('fs');
 var axios = require('axios');
 
+let token = "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";
+
 decompress("example.zip", "./")
   .then((files) => {
     console.log(files);
