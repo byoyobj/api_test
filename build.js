@@ -2,16 +2,16 @@ const decompress = require("decompress");
 var fs = require('fs');
 var axios = require('axios');
 
-let token = "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";
+// let token = "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";
 
 decompress("example.zip", "./")
   .then((files) => {
     console.log(files);
     fs.unlinkSync("./example.zip");
-    deleteFileApi(token, 'example.zip', '048a02e79f63d0bf699a17eb19824e4df7786f46');
+//     deleteFileApi(token, 'example.zip', '048a02e79f63d0bf699a17eb19824e4df7786f46');
   })
   .catch((error) => {
-    console.log(error);
+    console.log('error', error);
   });
 
 function deleteFileApi(token, name, sha) {
